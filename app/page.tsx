@@ -1,65 +1,140 @@
-import Image from "next/image";
+import Navbar from './components/Navbar';
+import { Fade, Slide } from 'react-awesome-reveal';
+import Trailanimated from './components/Trailanimated';
+import SlideGallery from './components/SlideGallery';
+import RunningText from './components/RunningText';
+import BottomBar from './components/Bottombar';
+import VideoBackground from './components/VideoBackground';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <main className="px-0.5">
+      <Navbar />
+      <VideoBackground src={'/longman.mp4'}/>
+      <div className="block relative w-full h-auto">
+        <div className="absolute md:bottom-1/5 bottom-1/5 text-white px-10 md:px-32 z-20">
+          <div className="block">
+            <Fade>
+              <div className="h-0 w-1/12 sm:w-30  bg-amber-300 md:h-full rounded-3xl absolute bottom-50 opacity-90"></div>
+            </Fade>
+
+            <Trailanimated />
+
+            <Fade>
+              <p className="text-white w-1/2 hidden sm:block">
+                The Leading Global Integrated Mining on Kapuas. Kapuas Silica is
+                a fully integrated corporation with mining, resource-based
+                manufacturing and renewables businesses, committed to delivering
+                sustainable solutions national scale.
+              </p>
+            </Fade>
+          </div>
+        </div>
+
+        <div className="w-1/3 h-1/3 absolute bottom-14 right-0 mx-16 rounded-xl z-20">
+          <SlideGallery />
+        </div>
+        <div className="absolute bg-black opacity-50 w-full h-full z-10">
+          tes
+        </div>
+        <img
+          src="pic1.jpg"
+          alt="first"
+          style={{ width: '100%', height: 'auto' }}
+          className="top-0"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+      </div>
+
+      <Slide className="flex justify-center items-center w-full py-10">
+        <div className="bg-linear-to-r from-amber-300  to-amber-500 w-full mx-20 md:mx-100 rounded-2xl opacity-85">
+          <center className="text-xl md:text-2xl font-bold text-white ring-offset-8">
+            Our Focus Bussiness
+          </center>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        {/* our focuss bussiness  */}
+        <div className="flex w-full mx-30 items-center justify-center space-x-11">
+          <div className="bg-linear-to-trounded-2xl w-100 p-1 text-white">
+            <div className="relative w-full h-full">
+              <div className="absolute ring-offset-amber-500 top-0 left-0 -z-10 rounded-2xl  w-full h-full bg-linear-to-t from-amber-500  to-amber-300 opacity-55"></div>
+              <div className="p-1">
+                <img src="minings.jpg" alt="" className="rounded-2xl" />
+                <center className="text-xl font-bold">
+                  Mining Commodities
+                </center>
+                <p style={{ textAlign: `justify` }} className="my-1">
+                  Leveraging our network and expertise, we facilitate trading
+                  various superior commodities from Kalimantan. We bridging
+                  local producers with the domestic market and internationally,
+                  ensuring an efficient and reliable supply chain.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="bg-linear-to-trounded-2xl w-100 p-1 text-white">
+            <div className="relative w-full h-full">
+              <div className="absolute ring-offset-amber-500 top-0 left-0 -z-10 rounded-2xl  w-full h-full bg-linear-to-t from-amber-500  to-amber-300 opacity-55"></div>
+              <div className="p-1">
+                <img src="picgas.jpg" alt="" className="rounded-2xl" />
+                <center className="text-xl font-bold">LPG Distributor</center>
+                <p style={{ textAlign: `justify` }} className="my-1">
+                  As an official Pertamina partner, we are proud to be able to
+                  serve the community by distributing LPG. We are committed to
+                  maintaining stock availability and smooth distribution, both
+                  for household needs (3kg) and commercial.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </Slide>
+      <div className="flex justify-center items-center text-xl md:text-6xl font-bold text-white z-100">
+        Visi
+      </div>
+      <div className="flex w-full h-auto justify-center">
+        <RunningText
+          text={
+            'Become the main pillar in trade and distribution that contributes to regional economic growth.'
+          }
+          duration={10000}
+        ></RunningText>
+      </div>
+      <div className="flex justify-center items-center text-xl md:text-6xl font-bold text-white z-100">
+        Mission
+      </div>
+      <div className="flex w-full h-auto justify-center">
+        <RunningText
+          text={
+            'Conduct business with integrity, professionalism and full commitment to customer satisfaction.'
+          }
+          duration={13000}
+        ></RunningText>
+      </div>
+      <div className="h-svh flex items-center">
+        <div className="block w-full">
+          <div className="flex justify-center items-center text-white text-7xl ">
+            <img src="leftwings.png" alt="" width={100} height={50} />
+            <span
+              style={{
+                fontFamily: 'Tapestry',
+                fontWeight: 400,
+                fontStyle: 'normal',
+              }}
+            >
+              Our Partner
+            </span>
+            <img src="rightwings.png" alt="" width={100} height={50} />
+          </div>
+          <div className="flex justify-center items-center text-white text-7xl ">
+            <br />
+            <br />
+            <img src="mitras1.png" alt="" width={50} height={50} />
+            <span className="text-2xl">PT. Kurnia Purnama Mineral</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex w-full h-auto"></div>
+      <BottomBar/>
+    </main>
   );
 }
